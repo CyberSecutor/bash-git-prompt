@@ -1,13 +1,19 @@
 # This is an alternative approach. Single line in git repo.
 
 override_git_prompt_colors() {
-  Time12a="\$(date +%H:%M:%S)"
+    Time12a="\$(date +%H:%M:%S)"
 
-  GIT_PROMPT_THEME_NAME="Custom_Host"
+    GIT_PROMPT_CONFLICTS=" ${Red}✖"
+    GIT_PROMPT_CHANGED=" ${Blue}✚"
+    GIT_PROMPT_UNTRACKED=" ${Cyan}…"
+    GIT_PROMPT_STASHED=" ${BoldBlue}⚑"
+    GIT_PROMPT_CLEAN=" ${BoldGreen}✔"
 
-  GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${White}[${Time12a}]${ResetColor} \\u@\\h ${BoldYellow}${PathShort}${ResetColor}"
-  GIT_PROMPT_END_USER="${ResetColor} \n$ "
-  GIT_PROMPT_END_ROOT="${BoldRed} \n# "
+    GIT_PROMPT_THEME_NAME="Custom_Host"
+
+    GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${White}[${Time12a}]${ResetColor} \\u@\\h ${BoldYellow}${PathShort}${ResetColor}"
+    GIT_PROMPT_END_USER="${ResetColor} \n$ "
+    GIT_PROMPT_END_ROOT="${BoldRed} \n# "
 }
 
 reload_git_prompt_colors "Single_line"
