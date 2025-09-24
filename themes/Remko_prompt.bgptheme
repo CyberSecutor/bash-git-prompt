@@ -1,4 +1,4 @@
-# This is an alternative approach. Single line in git repo.
+# This is an alternative approach. Single line in git repo./.bas
 
 override_git_prompt_colors() {
     Time12a="\$(date +%H:%M:%S)"
